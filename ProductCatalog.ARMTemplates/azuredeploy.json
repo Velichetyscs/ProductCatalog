@@ -41,7 +41,7 @@
     },
     {
       "type": "Microsoft.Storage/storageAccounts/blobServices/containers",
-      "apiVersion": "2020-08-01-preview",
+      "apiVersion": "2022-09-01",
       "name": "[concat(parameters('storageaccount_name'), '/default/images')]",
       "dependsOn": [
         "[resourceId('Microsoft.Storage/storageAccounts', parameters('storageaccount_name'))]"
