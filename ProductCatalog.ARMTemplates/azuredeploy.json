@@ -37,6 +37,7 @@
       "kind": "StorageV2",
       "properties": {
         "supportsHttpsTrafficOnly": true,
+        "accessTier": "Hot",
         "allowBlobPublicAccess": true
       }
     },
