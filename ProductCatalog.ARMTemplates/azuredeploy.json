@@ -29,7 +29,7 @@
       "type": "Microsoft.Storage/storageAccounts",
       "apiVersion": "2022-09-01",
       "name": "[parameters('storageaccount_name')]",
-      "location": "eastus",
+      "location": "eastus2",
       "sku": {
         "name": "Standard_LRS",
         "tier": "Standard"
@@ -54,7 +54,7 @@
       "type": "Microsoft.Sql/servers",
       "apiVersion": "2019-06-01-preview",
       "name": "[parameters('servers_dbserver_name')]",
-      "location": "eastus",
+      "location": "eastus2",
       "kind": "v12.0",
       "properties": {
         "administratorLogin": "dssadmin",
@@ -67,7 +67,7 @@
       "type": "Microsoft.Sql/servers/databases",
       "apiVersion": "2020-08-01-preview",
       "name": "[concat(parameters('servers_dbserver_name'), '/ProductCatalogDb')]",
-      "location": "eastus",
+      "location": "eastus2",
       "dependsOn": [
         "[resourceId('Microsoft.Sql/servers', parameters('servers_dbserver_name'))]"
       ],
@@ -102,7 +102,7 @@
       "type": "Microsoft.Web/serverfarms",
       "apiVersion": "2018-02-01",
       "name": "[parameters('serverfarms_appPlan_name')]",
-      "location": "East US",
+      "location": "East US2",
       "sku": {
         "name": "S1",
         "tier": "Standard",
@@ -126,7 +126,7 @@
       "type": "Microsoft.Web/sites",
       "apiVersion": "2018-11-01",
       "name": "[parameters('webapi_name')]",
-      "location": "East US",
+      "location": "East US2",
       "dependsOn": [
         "[resourceId('Microsoft.Web/serverfarms', parameters('serverfarms_appPlan_name'))]"
       ],
@@ -140,7 +140,7 @@
       "type": "Microsoft.Web/sites",
       "apiVersion": "2018-11-01",
       "name": "[parameters('webapp_name')]",
-      "location": "East US",
+      "location": "East US2",
       "dependsOn": [
         "[resourceId('Microsoft.Web/serverfarms', parameters('serverfarms_appPlan_name'))]"
       ],
